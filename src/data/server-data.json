@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "alias": "testserver1",
+    "location": "homeserver1",
+    "app": "JAVA",
+    "team": "dad",
+    "login": "user@testserver1.neffddm.com",
+    "cpus": 4
+  },
+  {
+    "id": "2",
+    "alias": "testserver2",
+    "location": "homeserver2",
+    "app": "JAVA",
+    "team": "dad",
+    "login": "user@testserver2.neffddm.com",
+    "cpus": 4
+  },
+  {
+    "id": "3",
+    "alias": "testserver3",
+    "location": "homeserver1",
+    "app": "JAVA",
+    "team": "kids",
+    "login": "user@testserver3.neffddm.com",
+    "cpus": 4
+  },
+  {
+    "id": "4",
+    "alias": "testserver4",
+    "location": "homeserver3",
+    "app": "JAVA",
+    "team": "dad",
+    "login": "user@testserver4.neffddm.com",
+    "cpus": 4
+  },
+  {
+    "id": "5",
+    "alias": "testserver5",
+    "location": "homeserver1",
+    "app": "JAVA",
+    "team": "dad",
+    "login": "user@testserver5.neffddm.com",
+    "cpus": 4
+  }
+]

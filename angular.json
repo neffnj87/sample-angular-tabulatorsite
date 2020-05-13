@@ -21,12 +21,16 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/data/server-data.json"
             ],
             "styles": [
+              "./node_modules/tabulator-tables/dist/css/tabulator_site.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/tabulator-tables/dist/js/tabulator.js"
+            ]
           },
           "configurations": {
             "production": {
