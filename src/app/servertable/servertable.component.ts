@@ -45,7 +45,7 @@ export class ServerTableByTeamComponent implements OnInit {
           selectable: true,
           clipboard: 'copy',
           columns: [ // Define Table Columns
-            {formatter: 'rowSelection', titleFormatter: 'rowSelection', align: 'center', headerSort: false},
+            {formatter: 'rowSelection', titleFormatter: 'rowSelection', hozAlign: 'center', headerSort: false},
             {formatter: 'responsiveCollapse', width: 30, hozAlign: 'center', resizable: false, headerSort: false},
             {title: 'ServerAlias', field: 'alias',  width: 300, headerFilter: 'input', responsive: 0, download: false,
             cellClick(e, cell) {const value = cell.getValue(); console.log(value); } },
@@ -77,15 +77,30 @@ export class ServerTableByTeamComponent implements OnInit {
             document.getElementById('select-stats').innerHTML = data.length;
             // console.log(rows);
             // console.log(length);
-            console.log(data);
-            const element = document.querySelectorAll('.tabulator-selected');
-            console.log(element);
-            const element2 = document.querySelectorAll('.tabulator-selected');
           },
           // cellClick(e, cell, login){
           //   console.log(login);
           // },
         });
       }});
+    }
+
+    getLogins() {
+      // const logins = document.getElementById('select-stats').innerHTML;
+      // const logins = document.querySelectorAll('div.tabulator-selected > div[tabulator-field="login"], innerText.value');
+      const logins = Array.from(document.querySelectorAll('div.tabulator-selected > div[tabulator-field="login"] '));
+      // const logins = Array.from(document.querySelectorAll('div.tabulator-selected > div:nth-child(6) '));
+      const numLogins = logins.length;
+      console.log(logins);
+      const val = logins[0].outerText; // this is how you get the value from the nodelist
+      console.log(val);
+      // console.log(numLogins);
+      // let i = 0;
+      // for (; i < numLogins; i++ ) {
+      //   console.log(i);
+      //   // const out = document.getElementsByName('[\$\i].innerText');
+      //   // console.log(Object.getOwnPropertyNames('[0].outerText'));
+      // }
+      // const username = logins.innerText.values();
     }
 }
