@@ -86,21 +86,17 @@ export class ServerTableByTeamComponent implements OnInit {
     }
 
     getLogins() {
-      // const logins = document.getElementById('select-stats').innerHTML;
-      // const logins = document.querySelectorAll('div.tabulator-selected > div[tabulator-field="login"], innerText.value');
+      document.getElementById('get-output').innerHTML = null;
       const logins = Array.from(document.querySelectorAll('div.tabulator-selected > div[tabulator-field="login"] '));
-      // const logins = Array.from(document.querySelectorAll('div.tabulator-selected > div:nth-child(6) '));
       const numLogins = logins.length;
-      console.log(logins);
-      const val = logins[0].outerText; // this is how you get the value from the nodelist
-      console.log(val);
-      // console.log(numLogins);
-      // let i = 0;
-      // for (; i < numLogins; i++ ) {
-      //   console.log(i);
-      //   // const out = document.getElementsByName('[\$\i].innerText');
-      //   // console.log(Object.getOwnPropertyNames('[0].outerText'));
-      // }
-      // const username = logins.innerText.values();
+      // const v = logins[0].outerText; // this is how you get the value from the nodelist
+      // console.log(v);
+      let val = 0;
+      for (; val < numLogins; val++){
+        const vals = logins[val]['innerText']; // ignore the string-literal error here, it's needed to use innerText
+        console.log(vals);
+        document.getElementById('get-output').innerHTML += vals;
+        document.getElementById('get-output').innerHTML += '\n';
+      }
     }
 }
